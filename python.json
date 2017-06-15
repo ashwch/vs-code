@@ -1,0 +1,51 @@
+{
+	"IPDB": {
+		"prefix": "ipdb",
+		"body": "import ipdb; ipdb.set_trace()",
+		"description": "IPDB"
+	},
+	"PDB": {
+		"prefix": "pdb",
+		"body": "import pdb; pdb.set_trace()",
+		"description": "PDB"
+	},
+	"Function": {
+		"prefix": "def",
+		"body": [
+			"def ${1:name}(${2:args}):",
+			"    $0"
+		],
+		"description": "Function"
+	},
+	"Property": {
+		"prefix": "property",
+		"body": [
+			"@property",
+			"def ${1:name}(self):",
+			"    $0"
+		],
+		"description": "Property"
+	},
+	"Property with Setter": {
+		"prefix": "property_with_setter",
+		"body": [
+			"@property",
+			"def ${1:name}(self):",
+			"    $2",
+			"",
+			"@${1:name}.setter",
+			"def ${1:name}(self, value):",
+			"    $0"
+		],
+		"description": "Property"
+	},
+	"Cached Property": {
+		"prefix": "cached_property",
+		"body": [
+			"@cached_property",
+			"def ${1:name}(self):",
+			"    $0"
+		],
+		"description": "Cached Property"
+	}
+}

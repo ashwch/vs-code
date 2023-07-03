@@ -19,5 +19,14 @@
         "key": "cmd+w",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
+    },
+    // End of key bindings related to terminal.
+    {
+        "key": "cmd+u",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "import time;start=time.time()\n${TM_SELECTED_TEXT}\nend=time.time()\nprint(\"Time taken by ${1}\", (end-start) * 1000, \"ms\")"
+        }
     }
 ]
